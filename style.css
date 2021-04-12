@@ -62,30 +62,22 @@ a:visited {
 .ContenedorMapa {
   display: block;
   position: absolute;
-  top: 30%;
-  left: 10%;
+  height: 10%;
+  width: 10%;
+  top: 80%;
+  left: 7%;
 }
 
 .Mapa {
   position: absolute;
+  bottom: 0%;
 }
-.Subsuelos {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-.primerSub img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-.segundoSub img {
+
+.Subsuelos,
+.primerSub,
+.segundoSub,
+.mapaPrimerSub,
+.mapaSegundoSub {
   position: absolute;
   top: 0;
   left: 0;
@@ -94,12 +86,123 @@ a:visited {
   margin: auto;
 }
 
-.recorrido img {
+#punto1 {
+  position: relative;
+  top: 82%;
+  left: 36.7%;
+  opacity: 0.5;
+}
+
+#punto2 {
+  position: relative;
+  top: 75%;
+  left: 34%;
+}
+
+#punto3 {
+  position: relative;
+  top: 66%;
+  left: 30%;
+}
+
+#punto4 {
+  position: relative;
+  top: 50%;
+  left: 32%;
+}
+
+#punto5 {
+  position: relative;
+  top: 50%;
+  left: 9.7%;
+}
+
+#punto6 {
+  position: relative;
+  top: 60%;
+  left: 28.7%;
+}
+
+#punto1:hover,
+#punto2:hover,
+#punto3:hover {
+  transform: scale(1.5);
+}
+.botonesSub {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#btn1sub {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  padding-top: 3%;
+}
+
+#btn2sub {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  padding-top: 3%;
+}
+
+#vacio1 {
+  position: absolute;
+  width: 45%;
+  height: 7%;
+  left: 0%;
+  padding-top: 1%;
+  padding-left: 2%;
+  z-index: 100;
+}
+
+#vacio2 {
+  position: absolute;
+  width: 49%;
+  height: 7%;
+  right: 0%;
+  padding-top: 1%;
+  padding-right: 3%;
+  z-index: 100;
+}
+
+.recorrido {
   position: absolute;
   display: block;
-  top: 77%;
-  left: 11%;
+  top: 50%;
+  left: 20%;
   z-index: 100;
+}
+
+/*responsive del mapa*/
+@media (max-width: 480px) {
+  .ContenedorMapa {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .Mapa {
+    transform: scale(0.7);
+    height: 100%;
+    left: 0;
+  }
+
+  .recorrido {
+    position: absolute;
+    display: block;
+    top: 85%;
+    left: 20%;
+    z-index: 100;
+  }
+}
+
+@media (max-width: 960px) {
 }
 
 /*EDITANDO*/

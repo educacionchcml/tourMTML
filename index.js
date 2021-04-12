@@ -31,13 +31,47 @@
   var fullscreenToggleElement = document.querySelector("#fullscreenToggle");
 
   //***EDITANDO***
-  var mapaElement = document.querySelector(".ContenedorMapa");
-  var recorridoElement = document.querySelector(".recorrido");
-  var primerSubsueloMapaElement = document.querySelector(".primerSub");
-  var segundoSubsueloMapaElement = document.querySelector(".segundoSub");
+  let mapaElement = document.querySelector(".Mapa");
+  let recorridoElement = document.querySelector(".recorrido");
+  let primerSubsueloMapaElement = document.querySelector(".primerSub");
+  let segundoSubsueloMapaElement = document.querySelector(".segundoSub");
 
-  //boton "recorrido"
+  let boton1erSubElement = document.querySelector("#btn1sub");
+  let boton2doSubElement = document.querySelector("#btn2sub");
+  let vac1 = document.querySelector("#vacio1");
+  let vac2 = document.querySelector("#vacio2");
+
+  let punto1Element = document.querySelector("#punto1");
+  let punto2Element = document.querySelector("#punto2");
+  let punto3Element = document.querySelector("#punto3");
+  let punto4Element = document.querySelector("#punto4");
+  let punto5Element = document.querySelector("#punto5");
+  let punto6Element = document.querySelector("#punto6");
+
+  //boton "recorrido" y "subsuelos"
   recorridoElement.addEventListener("click", esconderMapa);
+  vac1.addEventListener("click", cambiar1Sub);
+  vac2.addEventListener("click", cambiar2Sub);
+
+  //botones (puntos) del mapa
+  punto1Element.addEventListener("click", function () {
+    switchScene(scenes[0]);
+  });
+  punto2Element.addEventListener("click", function () {
+    switchScene(scenes[1]);
+  });
+  punto3Element.addEventListener("click", function () {
+    switchScene(scenes[2]);
+  });
+  punto4Element.addEventListener("click", function () {
+    switchScene(scenes[3]);
+  });
+  punto5Element.addEventListener("click", function () {
+    switchScene(scenes[4]);
+  });
+  punto6Element.addEventListener("click", function () {
+    switchScene(scenes[5]);
+  });
 
   //mostrar/esconder mapa -> boton "recorrido"
   function esconderMapa() {
@@ -55,10 +89,29 @@
     if (orden[0] <= 10) {
       primerSubsueloMapaElement.style.display = "block";
       segundoSubsueloMapaElement.style.display = "none";
+      boton1erSubElement.style.display = "block";
+      boton2doSubElement.style.display = "none";
     } else {
       primerSubsueloMapaElement.style.display = "none";
       segundoSubsueloMapaElement.style.display = "block";
+      boton1erSubElement.style.display = "none";
+      boton2doSubElement.style.display = "block";
     }
+  }
+
+  //cambiar Subsuelo
+  function cambiar1Sub() {
+    primerSubsueloMapaElement.style.display = "block";
+    segundoSubsueloMapaElement.style.display = "none";
+    boton1erSubElement.style.display = "block";
+    boton2doSubElement.style.display = "none";
+  }
+
+  function cambiar2Sub() {
+    primerSubsueloMapaElement.style.display = "none";
+    segundoSubsueloMapaElement.style.display = "block";
+    boton1erSubElement.style.display = "none";
+    boton2doSubElement.style.display = "block";
   }
 
   //***EDITANDO***
@@ -298,6 +351,7 @@
     sceneNameElement.innerHTML = sanitize(scene.data.name);
   }
 
+  //resalta la el nombre de la escena actual
   function updateSceneList(scene) {
     for (var i = 0; i < sceneElements.length; i++) {
       var el = sceneElements[i];
