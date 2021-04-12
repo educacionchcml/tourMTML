@@ -62,22 +62,37 @@ a:visited {
 .ContenedorMapa {
   display: block;
   position: absolute;
-  height: 10%;
-  width: 10%;
-  top: 80%;
-  left: 7%;
+  height: 2%;
+  width: 100%;
+  top: 95%;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+  justify-content: center;
+  
 }
 
 .Mapa {
   position: absolute;
+  width: 90%;
   bottom: 0%;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+  justify-content: center;
+}
+
+.fondoMapa, .mapaPrimerSub, .mapaSegundoSub {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .Subsuelos,
 .primerSub,
-.segundoSub,
-.mapaPrimerSub,
-.mapaSegundoSub {
+.segundoSub {
   position: absolute;
   top: 0;
   left: 0;
@@ -88,21 +103,23 @@ a:visited {
 
 #punto1 {
   position: relative;
-  top: 82%;
-  left: 36.7%;
+  top: -20%;
+  left: 36.2%;
   opacity: 0.5;
 }
 
 #punto2 {
   position: relative;
-  top: 75%;
-  left: 34%;
+  top: -30%;
+  left: 32.5%;
+  opacity: 0.5;
 }
 
 #punto3 {
   position: relative;
-  top: 66%;
-  left: 30%;
+  top: -40%;
+  left: 30.5%;
+  opacity: 0.5;
 }
 
 #punto4 {
@@ -134,16 +151,9 @@ a:visited {
   height: 100%;
 }
 
-#btn1sub {
+#btn1sub, #btn2sub {
   position: absolute;
-  left: 0%;
-  right: 0%;
-  margin: auto;
-  padding-top: 3%;
-}
-
-#btn2sub {
-  position: absolute;
+  width: 95%;
   left: 0%;
   right: 0%;
   margin: auto;
@@ -173,13 +183,16 @@ a:visited {
 .recorrido {
   position: absolute;
   display: block;
-  top: 50%;
-  left: 20%;
+  left: 10%;
+  bottom: 150%;
   z-index: 100;
 }
 
 /*responsive del mapa*/
-@media (max-width: 480px) {
+
+/* Extra small devices (phones, 600px and down) */
+/*
+@media only screen and (max-width: 600px) {
   .ContenedorMapa {
     height: 100%;
     width: 100%;
@@ -201,9 +214,20 @@ a:visited {
     z-index: 100;
   }
 }
+*/
 
-@media (max-width: 960px) {
-}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {...}*/
+
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...}*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...}*/
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...}*/
+
 
 /*EDITANDO*/
 
