@@ -101,24 +101,25 @@ a:visited {
   margin: auto;
 }
 
+.primerSub img {
+  position: absolute;
+}
+
 #punto1 {
-  position: relative;
-  top: -20%;
+  top: 83%;
   left: 36.2%;
   opacity: 0.5;
 }
 
 #punto2 {
-  position: relative;
-  top: -30%;
-  left: 32.5%;
+  top: 75%;
+  left: 36%;
   opacity: 0.5;
 }
 
 #punto3 {
-  position: relative;
-  top: -40%;
-  left: 30.5%;
+  top: 67%;
+  left: 36%;
   opacity: 0.5;
 }
 

@@ -47,6 +47,7 @@
   let punto4Element = document.querySelector("#punto4");
   let punto5Element = document.querySelector("#punto5");
   let punto6Element = document.querySelector("#punto6");
+  let puntoActualElement = document.querySelector("#puntoActual");
 
   //boton "recorrido" y "subsuelos"
   recorridoElement.addEventListener("click", esconderMapa);
@@ -72,6 +73,12 @@
   punto6Element.addEventListener("click", function () {
     switchScene(scenes[5]);
   });
+
+  //Pasar 
+  let posxActual = getComputedStyle
+  let posyActual =
+  puntoActualElement.style.top =
+  puntoActualElement.style.left =
 
   //mostrar/esconder mapa -> boton "recorrido"
   function esconderMapa() {
