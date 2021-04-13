@@ -1,8 +1,21 @@
+let punto0Element = document.querySelector("#punto0");
+let punto1Element = document.querySelector("#punto1");
+let punto2Element = document.querySelector("#punto2");
+let punto3Element = document.querySelector("#punto3");
+let punto4Element = document.querySelector("#punto4");
+let punto5Element = document.querySelector("#punto5");
+let punto6Element = document.querySelector("#punto6");
+let punto7Element = document.querySelector("#punto7");
+let punto8Element = document.querySelector("#punto8");
+let punto9Element = document.querySelector("#punto9");
+let punto10Element = document.querySelector("#punto10");
+
 var APP_DATA = {
   scenes: [
     {
       id: "0-dscn0017",
       name: "DSCN0017",
+      punto: punto0Element,
       levels: [
         {
           tileSize: 256,
@@ -41,6 +54,7 @@ var APP_DATA = {
     {
       id: "1-dscn0018",
       name: "DSCN0018",
+      punto: punto1Element,
       levels: [
         {
           tileSize: 256,
@@ -85,6 +99,7 @@ var APP_DATA = {
     {
       id: "2-dscn0019",
       name: "DSCN0019",
+      punto: punto2Element,
       levels: [
         {
           tileSize: 256,
@@ -129,6 +144,7 @@ var APP_DATA = {
     {
       id: "3-dscn0020",
       name: "DSCN0020",
+      punto: punto3Element,
       levels: [
         {
           tileSize: 256,
@@ -173,6 +189,7 @@ var APP_DATA = {
     {
       id: "4-dscn0021",
       name: "DSCN0021",
+      punto: punto4Element,
       levels: [
         {
           tileSize: 256,
@@ -217,6 +234,7 @@ var APP_DATA = {
     {
       id: "5-dscn0023",
       name: "DSCN0023",
+      punto: punto5Element,
       levels: [
         {
           tileSize: 256,
@@ -267,6 +285,7 @@ var APP_DATA = {
     {
       id: "6-dscn0024",
       name: "DSCN0024",
+      punto: punto6Element,
       levels: [
         {
           tileSize: 256,
@@ -317,6 +336,7 @@ var APP_DATA = {
     {
       id: "7-dscn0025",
       name: "DSCN0025",
+      punto: punto7Element,
       levels: [
         {
           tileSize: 256,
@@ -361,6 +381,7 @@ var APP_DATA = {
     {
       id: "8-dscn0026",
       name: "DSCN0026",
+      punto: punto8Element,
       levels: [
         {
           tileSize: 256,
@@ -405,6 +426,7 @@ var APP_DATA = {
     {
       id: "9-dscn0027",
       name: "DSCN0027",
+      punto: punto9Element,
       levels: [
         {
           tileSize: 256,
@@ -455,6 +477,7 @@ var APP_DATA = {
     {
       id: "10-dscn0028",
       name: "DSCN0028",
+      punto: punto10Element,
       levels: [
         {
           tileSize: 256,

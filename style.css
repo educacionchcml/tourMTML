@@ -66,11 +66,10 @@ a:visited {
   width: 100%;
   top: 95%;
   display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   justify-content: center;
-  
 }
 
 .Mapa {
@@ -78,13 +77,15 @@ a:visited {
   width: 90%;
   bottom: 0%;
   display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   justify-content: center;
 }
 
-.fondoMapa, .mapaPrimerSub, .mapaSegundoSub {
+.fondoMapa,
+.mapaPrimerSub,
+.mapaSegundoSub {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -105,46 +106,82 @@ a:visited {
   position: absolute;
 }
 
-#punto1 {
+#punto0 {
   top: 83%;
-  left: 36.2%;
+  left: 35%;
+  opacity: 0.5;
+}
+
+#punto1 {
+  top: 78%;
+  left: 35%;
   opacity: 0.5;
 }
 
 #punto2 {
-  top: 75%;
-  left: 36%;
+  top: 72%;
+  left: 35%;
   opacity: 0.5;
 }
 
 #punto3 {
-  top: 67%;
-  left: 36%;
+  position: relative;
+  top: 65%;
+  left: 35%;
   opacity: 0.5;
 }
 
 #punto4 {
   position: relative;
-  top: 50%;
-  left: 32%;
+  top: 59%;
+  left: 30%;
 }
 
 #punto5 {
   position: relative;
-  top: 50%;
-  left: 9.7%;
+  top: 54%;
+  left: 25%;
 }
 
 #punto6 {
   position: relative;
-  top: 60%;
-  left: 28.7%;
+  top: 30%;
+  left: 35%;
+}
+
+#punto7 {
+  position: relative;
+  top: 30%;
+  left: 35%;
+}
+
+#punto8 {
+  position: relative;
+  top: 30%;
+  left: 35%;
+}
+
+#punto9 {
+  position: relative;
+  top: 30%;
+  left: 35%;
+}
+
+#punto10 {
+  position: relative;
+  top: 30%;
+  left: 35%;
+}
+
+#puntoActual {
+  top: 82%;
+  left: 35%;
 }
 
 #punto1:hover,
 #punto2:hover,
 #punto3:hover {
-  transform: scale(1.5);
+  transform: scale(1);
 }
 .botonesSub {
   position: absolute;
@@ -152,7 +189,8 @@ a:visited {
   height: 100%;
 }
 
-#btn1sub, #btn2sub {
+#btn1sub,
+#btn2sub {
   position: absolute;
   width: 95%;
   left: 0%;
@@ -228,7 +266,6 @@ a:visited {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
-
 
 /*EDITANDO*/
 
