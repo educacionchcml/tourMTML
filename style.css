@@ -59,6 +59,36 @@ a:visited {
   box-shadow: inset 0 0 40px 20px rgb(0, 0, 0);
 }
 
+.nav {
+  position: absolute;
+  display:flex;
+  align-items: flex-end;
+  width: 90%;
+  height: 10%;
+  top: 15px;
+  left: 5%;
+}
+
+.nav > img {
+  position: absolute;
+  left: 0;
+  top:0;
+}
+
+#idioma {
+  margin-right: 10px;
+}
+
+.navIzq {
+  position: absolute;
+  right: 0;
+  top:0;
+}
+
+#menu {
+  transform: scale(0.6);
+}
+
 .ContenedorMapa {
   display: block;
   position: absolute;
@@ -74,6 +104,7 @@ a:visited {
 
 .Mapa {
   position: absolute;
+  display: none; 
   width: 90%;
   bottom: 0%;
   display: -webkit-flex;
@@ -102,80 +133,138 @@ a:visited {
   margin: auto;
 }
 
-.primerSub img {
+.primerSub img, .segundoSub img {
   position: absolute;
 }
+
+.mapaPrimerSub ~ img, .mapaSegundoSub ~ img {
+  opacity: 0.5;
+}
+
+/*Primer subsuelo*/
 
 #punto0 {
   top: 83%;
   left: 35%;
-  opacity: 0.5;
 }
 
 #punto1 {
-  top: 78%;
+  top: 77.5%;
   left: 35%;
-  opacity: 0.5;
 }
 
 #punto2 {
   top: 72%;
   left: 35%;
-  opacity: 0.5;
 }
 
 #punto3 {
-  position: relative;
-  top: 65%;
+  top: 66%;
   left: 35%;
-  opacity: 0.5;
 }
 
 #punto4 {
-  position: relative;
   top: 59%;
-  left: 30%;
+  left: 35%;
 }
 
 #punto5 {
-  position: relative;
   top: 54%;
-  left: 25%;
+  left: 35%;
 }
 
 #punto6 {
-  position: relative;
-  top: 30%;
-  left: 35%;
+  top: 46%;
+  left: 42%;
 }
 
 #punto7 {
-  position: relative;
-  top: 30%;
-  left: 35%;
+  top: 40.5%;
+  left: 28%;
 }
 
 #punto8 {
-  position: relative;
-  top: 30%;
-  left: 35%;
+  top: 45%;
+  left: 20%;
 }
 
 #punto9 {
-  position: relative;
-  top: 30%;
-  left: 35%;
+  top: 51%;
+  left: 25%;
 }
 
 #punto10 {
-  position: relative;
-  top: 30%;
-  left: 35%;
+  top: 51%;
+  left: 48%;
 }
 
+/*Segundo subsuelo*/
+
+#punto11 {
+  top: 56%;
+  left: 48%;
+}
+
+#punto12 {
+  top: 56%;
+  left: 39%;
+}
+
+#punto13 {
+  top: 56%;
+  left: 27%;
+}
+
+#punto14 {
+  top: 55.8%;
+  left: 14%;
+}
+
+#punto15 {
+  top: 55.4%;
+  left: 56%;
+}
+
+#punto16 {
+  top: 55.3%;
+  left: 69%;
+}
+
+#punto17 {
+  top: 55%;
+  left: 83%;
+}
+
+#punto18 {
+  top: 51%;
+  left: 43.5%;
+}
+
+#punto19 {
+  top: 43%;
+  left: 42.5%;
+}
+
+#punto20 {
+  top: 35%;
+  left: 41.8%;
+}
+
+#punto21 {
+  top: 28%;
+  left: 41%;
+}
+
+#punto22 {
+  top: 15%;
+  left: 40.3%;
+}
+
+/*punto actual*/
+
 #puntoActual {
-  top: 82%;
-  left: 35%;
+  position: absolute;
+  z-index: 400;
 }
 
 #punto1:hover,
@@ -183,6 +272,7 @@ a:visited {
 #punto3:hover {
   transform: scale(1);
 }
+
 .botonesSub {
   position: absolute;
   width: 100%;
@@ -262,7 +352,26 @@ a:visited {
 /*@media only screen and (min-width: 768px) {...}*/
 
 /* Large devices (laptops/desktops, 992px and up) */
-/*@media only screen and (min-width: 992px) {...}*/
+@media only screen and (min-width: 992px) {
+  .ContenedorMapa {
+    
+    height: 2%;
+    width: 100%;
+    top: 90%;
+    
+  }
+  
+  .Mapa {
+    width: 20%;
+    bottom: 30%;
+    left: 5%;
+    
+  }
+
+  .recorrido {
+    left: 6%
+  }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
@@ -270,35 +379,36 @@ a:visited {
 /*EDITANDO*/
 
 #titleBar {
+  display: none;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 40px;
+  bottom: 0; /*editado*/
+  right: 0;
   height: 40px;
+  width: 35%;
   text-align: center;
 }
 
 .mobile #titleBar {
   height: 50px;
-  right: 50px;
+  right: 0;
 }
 
 /* If there is a fullscreen button the title bar must make space for it */
 body.fullscreen-enabled #titleBar {
-  right: 80px;
+  right: 0;
 }
 
 body.fullscreen-enabled.mobile #titleBar {
-  right: 100px;
+  right: 0;
 }
 
 /* If there are multiple scenes the title bar must make space for the scene list toggle */
 body.multiple-scenes #titleBar {
-  left: 40px;
+  right: 0;
 }
 
 body.multiple-scenes.mobile #titleBar {
-  left: 50px;
+  right: 0;
 }
 
 #titleBar .sceneName {
@@ -373,7 +483,7 @@ body.fullscreen-enabled #fullscreenToggle {
 }
 
 #autorotateToggle {
-  display: block;
+  display: none; 
   position: absolute;
   top: 0;
   right: 0;
@@ -428,6 +538,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 #sceneListToggle {
+  display:none;
   position: absolute;
   top: 0;
   left: 0;

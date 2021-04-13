@@ -52,6 +52,18 @@
   let punto8Element = document.querySelector("#punto8");
   let punto9Element = document.querySelector("#punto9");
   let punto10Element = document.querySelector("#punto10");
+  let punto11Element = document.querySelector("#punto11");
+  let punto12Element = document.querySelector("#punto12");
+  let punto13Element = document.querySelector("#punto13");
+  let punto14Element = document.querySelector("#punto14");
+  let punto15Element = document.querySelector("#punto15");
+  let punto16Element = document.querySelector("#punto16");
+  let punto17Element = document.querySelector("#punto17");
+  let punto18Element = document.querySelector("#punto18");
+  let punto19Element = document.querySelector("#punto19");
+  let punto20Element = document.querySelector("#punto20");
+  let punto21Element = document.querySelector("#punto21");
+  let punto22Element = document.querySelector("#punto22");  
 
   let puntoActualElement = document.querySelector("#puntoActual");
 
@@ -94,17 +106,52 @@
   punto10Element.addEventListener("click", function () {
     switchScene(scenes[10]);
   });
-
-  //posicionar punto actual
+  punto11Element.addEventListener("click", function () {
+    switchScene(scenes[11]);
+  });
+  punto12Element.addEventListener("click", function () {
+    switchScene(scenes[12]);
+  });
+  punto13Element.addEventListener("click", function () {
+    switchScene(scenes[13]);
+  });
+  punto14Element.addEventListener("click", function () {
+    switchScene(scenes[14]);
+  });
+  punto15Element.addEventListener("click", function () {
+    switchScene(scenes[15]);
+  });
+  punto16Element.addEventListener("click", function () {
+    switchScene(scenes[16]);
+  });
+  punto17Element.addEventListener("click", function () {
+    switchScene(scenes[17]);
+  });
+  punto18Element.addEventListener("click", function () {
+    switchScene(scenes[18]);
+  });
+  punto19Element.addEventListener("click", function () {
+    switchScene(scenes[19]);
+  });
+  punto20Element.addEventListener("click", function () {
+    switchScene(scenes[20]);
+  });
+  punto21Element.addEventListener("click", function () {
+    switchScene(scenes[21]);
+  });
+  punto22Element.addEventListener("click", function () {
+    switchScene(scenes[22]);
+  });
+  
+  //posicionar punto indicador de la escena en curso
   function posicionPunto(scene) {
-    let puntoActual = scene.data.punto; //"" nombre del elemento que da la referencia de la posicion
+    let puntoActual = scene.data.punto; 
     let posyActual = window.getComputedStyle(puntoActual);
     let posy = posyActual.getPropertyValue("top");
     let posxActual = window.getComputedStyle(puntoActual);
     let posx = posxActual.getPropertyValue("left");
     puntoActualElement.style.top = posy;
     puntoActualElement.style.left = posx;
-    console.log(posx, posy);
   }
 
   //mostrar/esconder mapa -> boton "recorrido"
