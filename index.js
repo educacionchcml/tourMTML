@@ -63,7 +63,7 @@
   let punto19Element = document.querySelector("#punto19");
   let punto20Element = document.querySelector("#punto20");
   let punto21Element = document.querySelector("#punto21");
-  let punto22Element = document.querySelector("#punto22");  
+  let punto22Element = document.querySelector("#punto22");
 
   let puntoActualElement = document.querySelector("#puntoActual");
 
@@ -142,10 +142,10 @@
   punto22Element.addEventListener("click", function () {
     switchScene(scenes[22]);
   });
-  
+
   //posicionar punto indicador de la escena en curso
   function posicionPunto(scene) {
-    let puntoActual = scene.data.punto; 
+    let puntoActual = scene.data.punto;
     let posyActual = window.getComputedStyle(puntoActual);
     let posy = posyActual.getPropertyValue("top");
     let posxActual = window.getComputedStyle(puntoActual);
